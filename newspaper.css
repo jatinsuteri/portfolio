@@ -1,0 +1,293 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+    
+}
+.intro h1,h2,h3{
+    margin:0;
+}
+
+.intro a{
+    color: var(--magenta);
+    
+}
+.intro a:hover{
+    color: var(--hotmag);
+    text-decoration: none;
+    
+}
+
+.intro{
+    padding: 4rem 1rem 10rem 1rem ;
+    max-width: 1300px;
+    margin: 0 auto;
+    
+}
+
+.intro p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.name{
+    font-family: var(--mono);
+}
+.name span{
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+    font-weight:bolder;
+}
+.intro h2{
+    font-size: 4rem;
+    font-weight: lighter;
+}
+
+
+/*contact me section*/
+
+.contact{
+    
+    background-color: var(--plum);
+    color: var(--white);
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    
+}
+.contact .text{
+    padding: 0;
+    width: 400px;
+    text-align: center;
+}
+
+.contact p{
+    padding-bottom: 1rem;
+}
+
+/* Navbar ------------------------------------------------ */
+nav{
+    font-family: var(--mono) ;
+    font-size: 80%;
+    padding: 1rem;
+    
+}
+nav h1 a{
+    font-family: var(--sans);
+    
+}
+nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items:center;
+    gap: 2rem;
+
+    
+}
+nav h1{
+    margin:0;
+    
+}
+nav ul [class*="fa"]{
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+nav a:hover{
+    color: var(--magenta);
+}
+
+nav li:first-child{
+    flex-basis: 100%;
+    text-align: center;
+}
+nav span{
+    font-family: sans-serif;}
+    
+nav h1 span{
+    font-family: var(--sans);
+}
+nav h1 span[class*="fa"]{
+    font-size: 110%;
+}
+
+nav ul [class*= "fa"]:hover{
+    color: var(--magenta);
+}
+
+.button{
+    background-color: var(--magenta);
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    font-family: var(--mono);
+    text-decoration: none;
+}
+.button:hover{
+    background-color: var(--hotmag);
+    color: var(--white);
+}
+@media (min-width: 850px){
+    nav{
+        max-width: 1200px;
+        margin: 0 auto;
+        
+    }
+    nav li:first-child{
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+        
+    }
+}
+
+/*main content------------------------------------------------*/
+
+.dkblue{
+    background-color: var(--dkblue);
+}
+
+.projects{
+    padding: 4rem 3rem;
+}
+
+.projects h2{
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem*1.5);
+}
+
+.projects h3{
+    color: var(--aqua);
+}
+
+.projects h4{
+    font-size: 1rem;
+    font-family: var(--mono);
+    margin: 0;
+}
+
+.blackbox{
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 25px;
+    color: var(--white);
+    font-size: 1rem ;
+    line-height: 1.5;
+}
+
+.projects ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.projects img{
+    margin: 1rem 0 4rem 0;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+    padding: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 550px) {
+    article{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .text{
+        order: 2;
+        text-align: right;
+        grid-column: 7/11;
+        grid-row: 1/2;
+        max-width: 800px;
+    }
+    .projects ul{
+        justify-content: flex-end;
+    }
+    .projects img{
+        grid-column: 1/8;
+        grid-row: 1/2;
+    }
+    
+}
+
+/*foooterrr -----------------------------------------------------------*/
+
+.footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    list-style-type: none;
+    padding-top: 0.5rem;
+    font-size: 2rem;
+    
+    
+}
+
+.footer h2{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 3rem;
+    
+}
+.copyright{
+    text-align: center;
+    font-size: 0.9rem;
+    
+}
+
+/*color gradient that differentiate divs ig*/
+
+.gradient{
+    background: linear-gradient(90deg, rgba(121,9,121,1) 35%, rgba(242,255,0,1) 100%);
+    height: 2px;
+}
+
